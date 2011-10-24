@@ -10,12 +10,13 @@ Module dependencies:
 * JSON
 * LWP::UserAgent
 * URI
+* URI::Escape
 
 Example:
 
     my $e = new WebService::Embedly;
     my $r = $e->oembed(url => "http://vimeo.com/18150336");
-    print "Video title is: ", $embed_data->{'title'}, "\n";
+    print "Video title is: ", $r->[0]->{'title'}, "\n";
 
 Installation
 ------------
